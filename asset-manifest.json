@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/candy-crush-react/static/css/main.f6a3cde4.chunk.css",
-    "main.js": "/candy-crush-react/static/js/main.9bc05769.chunk.js",
-    "main.js.map": "/candy-crush-react/static/js/main.9bc05769.chunk.js.map",
+    "main.js": "/candy-crush-react/static/js/main.bd4a6fcf.chunk.js",
+    "main.js.map": "/candy-crush-react/static/js/main.bd4a6fcf.chunk.js.map",
     "runtime-main.js": "/candy-crush-react/static/js/runtime-main.f31b2aa7.js",
     "runtime-main.js.map": "/candy-crush-react/static/js/runtime-main.f31b2aa7.js.map",
     "static/js/2.43f790a8.chunk.js": "/candy-crush-react/static/js/2.43f790a8.chunk.js",
     "static/js/2.43f790a8.chunk.js.map": "/candy-crush-react/static/js/2.43f790a8.chunk.js.map",
     "index.html": "/candy-crush-react/index.html",
-    "precache-manifest.7db935edd2dab794ce80ea742b883153.js": "/candy-crush-react/precache-manifest.7db935edd2dab794ce80ea742b883153.js",
+    "precache-manifest.65506389ed105929e6e7d80029e843d8.js": "/candy-crush-react/precache-manifest.65506389ed105929e6e7d80029e843d8.js",
     "service-worker.js": "/candy-crush-react/service-worker.js",
     "static/css/main.f6a3cde4.chunk.css.map": "/candy-crush-react/static/css/main.f6a3cde4.chunk.css.map",
     "static/js/2.43f790a8.chunk.js.LICENSE.txt": "/candy-crush-react/static/js/2.43f790a8.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f31b2aa7.js",
     "static/js/2.43f790a8.chunk.js",
     "static/css/main.f6a3cde4.chunk.css",
-    "static/js/main.9bc05769.chunk.js"
+    "static/js/main.bd4a6fcf.chunk.js"
   ]
 }
