@@ -71,6 +71,7 @@ export default class Game extends Component {
     } else {
       console.log('Cant burst');
     }
+    grid = this.slideCandyDown(grid);
 
     this.setState({ grid: grid });
   }
@@ -125,6 +126,27 @@ export default class Game extends Component {
     }
 
     return arr;
+  }
+
+  slideCandyDown(g) {
+    for (let j = 0; j < g.length; j++) {
+      for (let i = g.length - 1; i >= 0; i--) {
+        let cell = g[i][j];
+        if (!('candyColor' in cell)) {
+          let k = i;
+          while (k > -1 && !('candyColor' in g[k][j])) {
+            console.log(k);
+            k--;
+          }
+
+          if (k > -1) {
+            g[i][j] = Object.assign({}, g[k][j]);
+            g[k][j] = {};
+          }
+        }
+      }
+    }
+    return g;
   }
 
   render() {
