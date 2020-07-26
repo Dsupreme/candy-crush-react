@@ -64,11 +64,42 @@ export default class Game extends Component {
       loop++;
     }
 
-    for (let cell of sameColorConnectedCandyCells) {
-      grid[cell[0]][cell[1]] = {};
+    if (this.checkCanBurst(sameColorConnectedCandyCells)) {
+      for (let cell of sameColorConnectedCandyCells) {
+        grid[cell[0]][cell[1]] = {};
+      }
+    } else {
+      console.log('Cant burst');
     }
 
     this.setState({ grid: grid });
+  }
+
+  checkCanBurst(arr) {
+    let i = 0;
+    let countX = 0,
+      countY = 0,
+      dictX = {},
+      dictY = {};
+    while (countX <= 2 && countY <= 2 && i < arr.length) {
+      if (arr[i][0] in dictX) {
+        dictX[arr[i][0]] += 1;
+        countX = Math.max(countX, dictX[arr[i][0]]);
+      } else {
+        dictX[arr[i][0]] = 1;
+      }
+
+      if (arr[i][1] in dictY) {
+        dictY[arr[i][1]] += 1;
+        countY = Math.max(countY, dictY[arr[i][1]]);
+      } else {
+        dictY[arr[i][1]] = 1;
+      }
+
+      i++;
+    }
+
+    return countX > 2 || countY > 2 ? true : false;
   }
 
   findConnectedCandyCells(g, c, i, j) {
