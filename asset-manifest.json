@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/candy-crush-react/static/css/main.f6a3cde4.chunk.css",
+    "main.js": "/candy-crush-react/static/js/main.3a32f916.chunk.js",
+    "main.js.map": "/candy-crush-react/static/js/main.3a32f916.chunk.js.map",
+    "runtime-main.js": "/candy-crush-react/static/js/runtime-main.f31b2aa7.js",
+    "runtime-main.js.map": "/candy-crush-react/static/js/runtime-main.f31b2aa7.js.map",
+    "static/js/2.43f790a8.chunk.js": "/candy-crush-react/static/js/2.43f790a8.chunk.js",
+    "static/js/2.43f790a8.chunk.js.map": "/candy-crush-react/static/js/2.43f790a8.chunk.js.map",
+    "index.html": "/candy-crush-react/index.html",
+    "precache-manifest.9f675569be8217302f57cd01deaa2556.js": "/candy-crush-react/precache-manifest.9f675569be8217302f57cd01deaa2556.js",
+    "service-worker.js": "/candy-crush-react/service-worker.js",
+    "static/css/main.f6a3cde4.chunk.css.map": "/candy-crush-react/static/css/main.f6a3cde4.chunk.css.map",
+    "static/js/2.43f790a8.chunk.js.LICENSE.txt": "/candy-crush-react/static/js/2.43f790a8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f31b2aa7.js",
+    "static/js/2.43f790a8.chunk.js",
+    "static/css/main.f6a3cde4.chunk.css",
+    "static/js/main.3a32f916.chunk.js"
+  ]
+}
