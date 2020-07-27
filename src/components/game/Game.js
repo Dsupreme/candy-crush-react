@@ -42,11 +42,27 @@ export default class Game extends Component {
 
   leftClick(i, j) {
     let grid = this.state.grid;
-    let sameColorConnectedCandyCells = [];
+    let sameColorConnectedCandyCells = this.findConnectedCandies(grid, i, j);
 
-    let loop = 0;
+    if (this.checkCanBurst(sameColorConnectedCandyCells)) {
+      grid = this.burstCandies(grid, sameColorConnectedCandyCells);
+      this.props.onBurstCandies(sameColorConnectedCandyCells.length);
+    } else {
+      console.log('Cant burst');
+    }
+    grid = this.slideCandyDown(grid);
+    this.setState({ grid: grid });
+    setTimeout(() => {
+      grid = this.addMoreCandies(grid);
+      this.setState({ grid: grid });
+    }, 2000);
+  }
+
+  findConnectedCandies(grid, i, j) {
+    let sameColorConnectedCandyCells = [];
     sameColorConnectedCandyCells.push([i, j]);
 
+    let loop = 0;
     while (loop < sameColorConnectedCandyCells.length) {
       sameColorConnectedCandyCells = sameColorConnectedCandyCells.concat(
         this.findConnectedCandyCells(
@@ -64,16 +80,7 @@ export default class Game extends Component {
       loop++;
     }
 
-    if (this.checkCanBurst(sameColorConnectedCandyCells)) {
-      for (let cell of sameColorConnectedCandyCells) {
-        grid[cell[0]][cell[1]] = {};
-      }
-    } else {
-      console.log('Cant burst');
-    }
-    grid = this.slideCandyDown(grid);
-
-    this.setState({ grid: grid });
+    return sameColorConnectedCandyCells;
   }
 
   checkCanBurst(arr) {
@@ -101,6 +108,14 @@ export default class Game extends Component {
     }
 
     return countX > 2 || countY > 2 ? true : false;
+  }
+
+  burstCandies(grid, sameColorConnectedCandyCells) {
+    for (let cell of sameColorConnectedCandyCells) {
+      grid[cell[0]][cell[1]] = {};
+    }
+
+    return grid;
   }
 
   findConnectedCandyCells(g, c, i, j) {
@@ -135,7 +150,6 @@ export default class Game extends Component {
         if (!('candyColor' in cell)) {
           let k = i;
           while (k > -1 && !('candyColor' in g[k][j])) {
-            console.log(k);
             k--;
           }
 
@@ -146,6 +160,18 @@ export default class Game extends Component {
         }
       }
     }
+    return g;
+  }
+
+  addMoreCandies(g) {
+    for (let j = 0; j < g.length; j++) {
+      for (let i = g.length - 1; i >= 0; i--) {
+        if (!g[i][j].candyColor) {
+          g[i][j] = Object.assign({}, this.createCell());
+        }
+      }
+    }
+
     return g;
   }
 
