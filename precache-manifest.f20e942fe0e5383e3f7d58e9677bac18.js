@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "222a9ec03e7c75c882363d55ff1c75b8",
+    "revision": "129d0ef952fd7c299e46660c3b9114ff",
     "url": "/candy-crush-react/index.html"
   },
   {
-    "revision": "42325057ce76c2ba5d86",
+    "revision": "edaaa68c9aa65bf356fa",
     "url": "/candy-crush-react/static/css/main.f6a3cde4.chunk.css"
   },
   {
-    "revision": "00536439cba2199f3ddc",
-    "url": "/candy-crush-react/static/js/2.43f790a8.chunk.js"
+    "revision": "8250e4e6a0a00218a773",
+    "url": "/candy-crush-react/static/js/2.116875a7.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/candy-crush-react/static/js/2.43f790a8.chunk.js.LICENSE.txt"
+    "url": "/candy-crush-react/static/js/2.116875a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "42325057ce76c2ba5d86",
-    "url": "/candy-crush-react/static/js/main.bd4a6fcf.chunk.js"
+    "revision": "edaaa68c9aa65bf356fa",
+    "url": "/candy-crush-react/static/js/main.598a2161.chunk.js"
   },
   {
     "revision": "5e1f6dc2f6ffdf6a8e4a",
